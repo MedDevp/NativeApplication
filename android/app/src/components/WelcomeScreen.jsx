@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import WelcomeImage from '../assets/image.png'; // Adjust the path accordingly
+import WelcomeImage from '../assets/Welcome.jpg'; // Adjust the path accordingly
 import {Button} from 'react-native-paper';
 
 const WelcomeScreen = ({navigation}) => {
@@ -41,11 +41,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     backgroundColor: 'white',
+    width : '100%',
   },
   image: {
     width: 300,
     height: 300,
-    marginBottom: 20,
+    marginBottom: 0,
   },
   title: {
     fontSize: 35, // Adjust font size as needed
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
     color: '#1F41BB',
-    marginTop: 80,
+    marginTop: 60,
     zIndex: 5,
   },
   subtitle: {
@@ -67,8 +68,8 @@ const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%', // Ensure buttons take full width
-    paddingHorizontal: 20, // Add padding to buttons
+    width: '100%', 
+    paddingHorizontal: 20, 
     position: 'relative',
     zIndex: 5,
   },
@@ -85,18 +86,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    width: '45%',
+    width: '50%',
     alignItems: 'center',
     borderRadius: 10,
   },
   btnText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   btnTextRegister: {
     color: 'black',
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   square: {
