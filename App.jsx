@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from './android/app/src/components/WelcomeScreen'; // Ajustez le chemin si nécessaire
 import LoginScreen from './android/app/src/components/LoginScreen'; // Ajustez le chemin si nécessaire
 import CreateAccountScreen from './android/app/src/components/CreateAccountScreen'; // Ajustez le chemin si nécessaire
+import { registerRootComponent } from 'expo';
 
 const Stack = createStackNavigator();
 
@@ -18,5 +19,6 @@ const App = () => {
     </NavigationContainer>
   );
 };
+registerRootComponent(App);
 
 export default App;
