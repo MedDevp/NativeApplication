@@ -1,15 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Image,
 } from 'react-native';
-import {Button} from 'react-native-paper';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { Button } from 'react-native-paper';
+import apple from '../assets/apple.png';
+import facebook from '../assets/facebook.png';
+import google from '../assets/google.png';
 
-const CreateAccountScreen = ({navigation}) => {
+const CreateAccountScreen = ({ navigation }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -59,9 +62,15 @@ const CreateAccountScreen = ({navigation}) => {
       </TouchableOpacity>
       <Text style={styles.textCon}>Or continue with</Text>
       <View style={styles.iconContainer}>
-        <Text>G</Text>
-        <Text>F</Text>
-        <Text>A</Text>
+        <TouchableOpacity style={styles.iconButton}>
+          <Image source={google} style={styles.iconImage} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconButton}>
+          <Image source={facebook} style={styles.iconImage} />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.iconButton}>
+          <Image source={apple} style={styles.iconImage} />
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -94,6 +103,7 @@ const styles = StyleSheet.create({
     borderColor: '',
     backgroundColor: '#F1F4FF',
     marginBottom: 15,
+    borderRadius: 5,
   },
   button: {
     marginVertical: 20,
@@ -105,6 +115,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 14,
     color: '#494949',
+    fontWeight : 'bold',
+    margin : 40,
+
   },
   textCon: {
     marginTop: 10,
@@ -115,14 +128,20 @@ const styles = StyleSheet.create({
   iconContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '30%',
+    width: '50%',
     marginTop: 20,
   },
   iconButton: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: 5,
+    marginHorizontal: 10,
+    backgroundColor: '#ECECEC',
+    padding: 10,
+    borderRadius: 10,
+  },
+  iconImage: {
+    width: 20,
+    height: 20,
   },
 });
 
